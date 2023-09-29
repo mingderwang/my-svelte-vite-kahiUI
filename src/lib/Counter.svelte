@@ -1,10 +1,15 @@
-<script lang="ts">
-  let count: number = 0
-  const increment = () => {
-    count += 1
-  }
+<script>
+    import {Button, Heading} from "@kahi-ui/framework";
+
+    let clicks = 0;
+
+    function on_click(event) {
+        clicks++;
+    }
 </script>
 
-<button on:click={increment}>
-  count is {count}
-</button>
+<Heading>
+    Clicks: {clicks}
+</Heading>
+
+<Button on:click={on_click}>Add +1</Button>
